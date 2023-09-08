@@ -16,7 +16,7 @@ class CoinToss extends Component {
   }
 
   changeCount = () => {
-    const num = Math.Floor(Math.random() * 2)
+    const num = Math.Floor(Math.random() * 1)
     const url = imagesList[num]
     if (url === 'https://assets.ccbp.in/frontend/react-js/heads-img.png') {
       this.setState(prevCount => ({
