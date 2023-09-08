@@ -2,11 +2,6 @@
 import {Component} from 'react'
 import './index.css'
 
-const imagesList = [
-  'https://assets.ccbp.in/frontend/react-js/heads-img.png',
-  'https://assets.ccbp.in/frontend/react-js/tails-img.png',
-]
-
 class CoinToss extends Component {
   state = {
     imageUrl: 'https://assets.ccbp.in/frontend/react-js/heads-img.png',
@@ -17,16 +12,18 @@ class CoinToss extends Component {
 
   changeCount = () => {
     const num = Math.Floor(Math.random() * 1)
-    const url = imagesList[num]
-    if (url === 'https://assets.ccbp.in/frontend/react-js/heads-img.png') {
+
+    if (num === 0) {
       this.setState(prevCount => ({
         total: prevCount.total + 1,
         heads: prevCount.heads + 1,
+        imageUrl: 'https://assets.ccbp.in/frontend/react-js/heads-img.png',
       }))
     } else {
       this.setState(prevCount => ({
         total: prevCount.total + 1,
         tails: prevCount.tails + 1,
+        imageUrl: 'https://assets.ccbp.in/frontend/react-js/tails-img.png',
       }))
     }
   }
