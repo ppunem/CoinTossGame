@@ -11,7 +11,7 @@ class CoinToss extends Component {
   }
 
   changeCount = () => {
-    const num = Math.Floor(Math.random() * 1)
+    const num = Math.Floor(Math.random() * 2)
 
     if (num === 0) {
       this.setState(prevCount => ({
